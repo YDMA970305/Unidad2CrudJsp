@@ -8,7 +8,7 @@ import java.io.Serializable; // Necesario para la serialización de entidades
  * @author yesid
  */
 @Entity // Declara esta clase como una entidad JPA
-@Table(name = "articulos") // Mapea esta entidad a la tabla 'articulos' en tu base de datos
+@Table(name = "articulo") // Mapea esta entidad a la tabla 'articulos' en tu base de datos
 public class Articulo implements Serializable { // Implementa Serializable
 
     @Id // Marca 'idArticulo' como la clave primaria
@@ -16,38 +16,38 @@ public class Articulo implements Serializable { // Implementa Serializable
     @Column(name = "id_articulo") // Mapea el campo 'idArticulo' de Java a la columna 'id_articulo' en la DB
     private int idArticulo;
 
-    @Column(name = "marca") // Mapea el campo 'marca' de Java a la columna 'marca' en la DB
+    @Column(name = "marca") 
     private String marca;
 
-    @Column(name = "precio_venta") // Mapea precioVenta a 'precio_venta'
+    @Column(name = "precio_venta") 
     private double precioVenta;
 
-    @Column(name = "precio_compra") // Mapea precioCompra a 'precio_compra'
+    @Column(name = "precio_compra") 
     private double precioCompra;
 
-    @Column(name = "iva") // Mapea iva a 'iva'
+    @Column(name = "iva") 
     private double iva;
 
-    @Column(name = "modelo") // Mapea modelo a 'modelo'
+    @Column(name = "modelo") 
     private String modelo;
 
-    @Column(name = "proveedor") // Mapea proveedor a 'proveedor'
+    @Column(name = "proveedor") 
     private String proveedor;
 
-    @Column(name = "tienda") // Mapea tienda a 'tienda'
+    @Column(name = "tienda") 
     private String tienda;
 
-    @Column(name = "cantidad") // Mapea cantidad a 'cantidad'
+    @Column(name = "cantidad") 
     private int cantidad;
 
-    @Column(name = "categoria") // Mapea categoria a 'categoria'
+    @Column(name = "categoria") 
     private String categoria;
 
-    @Column(name = "descripcion") // Mapea descripcion a 'descripcion'
+    @Column(name = "descripcion") 
     private String descripcion;
 
-    @Column(name = "nombre_usuario") // Mapea nombreUsuario a 'nombre_usuario'
-    private String nombreUsuario; // Esto parece ser una clave foránea o una referencia al usuario que creó el artículo
+    @Column(name = "nombre_usuario") 
+    private String nombreUsuario; 
 
     public Articulo() {
         // El constructor vacío es necesario para que Hibernate pueda instanciar la entidad

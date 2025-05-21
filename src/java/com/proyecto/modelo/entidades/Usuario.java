@@ -12,12 +12,12 @@ import javax.persistence.*; // Importar las anotaciones de JPA
 import java.io.Serializable; // Importar Serializable
 
 @Entity // Declara esta clase como una entidad JPA
-@Table(name = "usuario") // Mapea esta entidad a la tabla 'usuarios'
+@Table(name = "usuario") // Mapea esta entidad a la tabla 'usuario'
 public class Usuario implements Serializable { // Implementa Serializable
 
     @Id // Marca 'nombreUsuario' como la clave primaria
     @Column(name = "nombre_usuario") // Mapea el campo 'nombreUsuario' de Java a la columna 'nombre_usuario' en la DB
-    private String nombreUsuario; // Este será tu ID
+    private String nombreUsuario; // Este será el ID
 
     @Column(name = "contrasena") // Mapea contrasena a la columna 'contrasena'
     private String contrasena; // Esto es password en tu descripción original, mantengo 'contrasena'
@@ -30,7 +30,7 @@ public class Usuario implements Serializable { // Implementa Serializable
         // Constructor vacío es necesario para Hibernate
     }
 
-    // Constructor para crear nuevos usuarios (sin necesidad de pasar el ID ya que es nombreUsuario)
+    // Constructor para crear nuevos usuarios ()
     public Usuario(String nombreUsuario, String contrasena, String email, String nombre, String tipo) {
         this.nombreUsuario = nombreUsuario;
         this.contrasena = contrasena;
