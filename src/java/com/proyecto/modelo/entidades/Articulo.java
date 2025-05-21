@@ -9,40 +9,24 @@ package com.proyecto.modelo.entidades;
  * @author yesid
  */
 public class Articulo {
- private int idarticulo;
+ private int idArticulo;
  private String marca;
- private double PrecioVenta;
- private double PrecioCompra;
- private double Iva;
- private String Modelo;
- private String proovedor;
- private String Tienda;
- private int Cantidad;
- private String Categoria;
- private String Descripcion;
- private String nombreUsuario;
-
-    public Articulo(int idarticulo, String marca, double PrecioVenta, double PrecioCompra, double Iva, String Modelo, String proovedor, String Tienda, int Cantidad, String Categoria, String Descripcion, String nombreUsuario) {
-        this.idarticulo = idarticulo;
-        this.marca = marca;
-        this.PrecioVenta = PrecioVenta;
-        this.PrecioCompra = PrecioCompra;
-        this.Iva = Iva;
-        this.Modelo = Modelo;
-        this.proovedor = proovedor;
-        this.Tienda = Tienda;
-        this.Cantidad = Cantidad;
-        this.Categoria = Categoria;
-        this.Descripcion = Descripcion;
-        this.nombreUsuario = nombreUsuario;
+ private double precioVenta;
+ private double precioCompra;
+ private double iva;
+ private String modelo;
+ private String proveedor;
+ private String tienda;
+ private int cantidad;
+ private String categoria;
+ private String descripcion;
+private String nombreUsuario;
+    public int getIdArticulo() {
+        return idArticulo;
     }
 
-    public int getIdarticulo() {
-        return idarticulo;
-    }
-
-    public void setIdarticulo(int idarticulo) {
-        this.idarticulo = idarticulo;
+    public void setIdArticulo(int idArticulo) {
+        this.idArticulo = idArticulo;
     }
 
     public String getMarca() {
@@ -54,75 +38,75 @@ public class Articulo {
     }
 
     public double getPrecioVenta() {
-        return PrecioVenta;
+        return precioVenta;
     }
 
-    public void setPrecioVenta(double PrecioVenta) {
-        this.PrecioVenta = PrecioVenta;
+    public void setPrecioVenta(double precioVenta) {
+        this.precioVenta = precioVenta;
     }
 
     public double getPrecioCompra() {
-        return PrecioCompra;
+        return precioCompra;
     }
 
-    public void setPrecioCompra(double PrecioCompra) {
-        this.PrecioCompra = PrecioCompra;
+    public void setPrecioCompra(double precioCompra) {
+        this.precioCompra = precioCompra;
     }
 
     public double getIva() {
-        return Iva;
+        return iva;
     }
 
-    public void setIva(double Iva) {
-        this.Iva = Iva;
+    public void setIva(double iva) {
+        this.iva = iva;
     }
 
     public String getModelo() {
-        return Modelo;
+        return modelo;
     }
 
-    public void setModelo(String Modelo) {
-        this.Modelo = Modelo;
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
     }
 
-    public String getProovedor() {
-        return proovedor;
+    public String getProveedor() {
+        return proveedor;
     }
 
-    public void setProovedor(String proovedor) {
-        this.proovedor = proovedor;
+    public void setProveedor(String proveedor) {
+        this.proveedor = proveedor;
     }
 
     public String getTienda() {
-        return Tienda;
+        return tienda;
     }
 
-    public void setTienda(String Tienda) {
-        this.Tienda = Tienda;
+    public void setTienda(String tienda) {
+        this.tienda = tienda;
     }
 
     public int getCantidad() {
-        return Cantidad;
+        return cantidad;
     }
 
-    public void setCantidad(int Cantidad) {
-        this.Cantidad = Cantidad;
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
     }
 
     public String getCategoria() {
-        return Categoria;
+        return categoria;
     }
 
-    public void setCategoria(String Categoria) {
-        this.Categoria = Categoria;
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
     }
 
     public String getDescripcion() {
-        return Descripcion;
+        return descripcion;
     }
 
-    public void setDescripcion(String Descripcion) {
-        this.Descripcion = Descripcion;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public String getNombreUsuario() {
@@ -132,6 +116,22 @@ public class Articulo {
     public void setNombreUsuario(String nombreUsuario) {
         this.nombreUsuario = nombreUsuario;
     }
+
+    public Articulo(int idArticulo, String marca, double precioVenta, double precioCompra, double iva, String modelo, String proveedor, String tienda, int cantidad, String categoria, String descripcion, String nombreUsuario) {
+        this.idArticulo = idArticulo;
+        this.marca = marca;
+        this.precioVenta = precioVenta;
+        this.precioCompra = precioCompra;
+        this.iva = iva;
+        this.modelo = modelo;
+        this.proveedor = proveedor;
+        this.tienda = tienda;
+        this.cantidad = cantidad;
+        this.categoria = categoria;
+        this.descripcion = descripcion;
+        this.nombreUsuario = nombreUsuario;
+    }
  
+
     
 }
