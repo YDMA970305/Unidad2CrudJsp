@@ -9,9 +9,32 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Iniciar Sesión</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Iniciar Sesión</h1>
+        <form action="../LoginServlet" method="post">
+            <p>
+                <label for="identificador">Nombre de Usuario o Email:</label><br>
+                <input type="text" id="identificador" name="identificador" required>
+            </p>
+            <p>
+                <label for="contrasena">Contraseña:</label><br>
+                <input type="password" id="contrasena" name="contrasena" required>
+            </p>
+            <p>
+                <button type="submit">Entrar</button>
+            </p>
+        </form>
+        <%
+            String loginError = (String) request.getAttribute("loginError");
+            if (loginError != null) {
+        %>
+        <p style="color: red; font-weight: bold;"><%= loginError%></p>
+        <%
+            }
+        %>
+        <br>
+        <a href="crear.jsp">¿No tienes cuenta? Regístrate aquí</a>
     </body>
 </html>
