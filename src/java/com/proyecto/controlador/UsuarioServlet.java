@@ -15,11 +15,11 @@ import com.proyecto.modelo.entidades.Usuario;
 import com.proyecto.modelo.servicios.UsuarioService;
 import java.io.IOException;
 import java.util.List;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -38,7 +38,6 @@ public class UsuarioServlet extends HttpServlet {
             if (accion == null) {
                 accion = "listar"; // Acción por defecto si no se especifica
             }
-
             switch (accion) {
                 case "listar":
                     listarUsuarios(request, response);

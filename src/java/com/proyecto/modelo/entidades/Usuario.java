@@ -8,8 +8,8 @@ package com.proyecto.modelo.entidades;
  */
 
 
-import javax.persistence.*; // Importar las anotaciones de JPA
-import java.io.Serializable; // Importar Serializable
+import jakarta.persistence.*; 
+import java.io.Serializable; 
 
 @Entity // Declara esta clase como una entidad JPA
 @Table(name = "usuario") // Mapea esta entidad a la tabla 'usuario'
@@ -19,12 +19,12 @@ public class Usuario implements Serializable { // Implementa Serializable
     @Column(name = "nombre_usuario") // Mapea el campo 'nombreUsuario' de Java a la columna 'nombre_usuario' en la DB
     private String nombreUsuario; // Este será el ID
 
-    @Column(name = "contrasena") // Mapea contrasena a la columna 'contrasena'
-    private String contrasena; // Esto es password en tu descripción original, mantengo 'contrasena'
+    @Column(name = "contrasena") 
+    private String contrasena; 
 
-    private String email; // Asumiendo que el nombre de columna en DB es 'email'
-    private String nombre; // Asumiendo que el nombre de columna en DB es 'nombre'
-    private String tipo;   // Asumiendo que el nombre de columna en DB es 'tipo'
+    private String email; 
+    private String nombre;
+    private String tipo;   
 
     public Usuario() {
         // Constructor vacío es necesario para Hibernate

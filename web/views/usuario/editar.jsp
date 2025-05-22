@@ -16,7 +16,7 @@
         <h1>Editar Usuario</h1>
         <% // Recupera el objeto Usuario del ámbito de la solicitud
            Usuario usuario = (Usuario) request.getAttribute("usuario");
-           // Si el usuario es null (ej. si el ID no se encontró), podrías redirigir o mostrar un mensaje
+          
            if (usuario == null) {
                response.sendRedirect("../UsuarioServlet?accion=listar&error=usuarioNotFound");
                return;
@@ -39,7 +39,7 @@
             </p>
             <p>
                 <label for="contrasena">Nueva Contraseña (dejar en blanco para no cambiar):</label><br>
-                <input type="password" id="contrasena" name="contrasena"> <%-- Campo de contraseña opcional --%>
+                <input type="password" id="contrasena" name="contrasena"> 
             </p>
             <p>
                 <label for="tipo">Tipo de Usuario:</label><br>

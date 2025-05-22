@@ -1,6 +1,6 @@
 package com.proyecto.modelo.entidades;
 
-import javax.persistence.*; // ¡Importante para las anotaciones JPA!
+import jakarta.persistence.*; // ¡Importante para las anotaciones JPA!
 import java.io.Serializable; // Necesario para la serialización de entidades
 
 /**

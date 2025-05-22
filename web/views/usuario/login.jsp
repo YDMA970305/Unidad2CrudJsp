@@ -13,7 +13,7 @@
     </head>
     <body>
         <h1>Iniciar Sesión</h1>
-        <form action="../LoginServlet" method="post">
+        <form action="../../LoginServlet" method="post">
             <p>
                 <label for="identificador">Nombre de Usuario o Email:</label><br>
                 <input type="text" id="identificador" name="identificador" required>

@@ -3,6 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.proyecto.util;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  *
@@ -11,10 +15,7 @@ package com.proyecto.util;
 /*Esta clase se encargará de configurar y proporcionar la SessionFactory de Hibernate, 
 que es necesaria para obtener las sesiones (conexiones) a la base de datos.*/
 
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 
 
 public class HibernateUtil {
@@ -26,8 +27,8 @@ public class HibernateUtil {
             // Crea la SessionFactory desde hibernate.cfg.xml
             return new Configuration().configure().buildSessionFactory();
         } catch (Throwable ex) {
-            // Loguea el error
-            logger.error("Error al inicializar la SessionFactory de Hibernate: " + ex.getMessage(), ex);
+           // Loguea el error
+          logger.error("Error al inicializar la SessionFactory de Hibernate: " + ex.getMessage(), ex);
             throw new ExceptionInInitializerError(ex);
         }
     }
@@ -39,6 +40,6 @@ public class HibernateUtil {
     public static void shutdown() {
         // Cierra el caché y el pool de conexiones
         getSessionFactory().close();
-        logger.info("Hibernate SessionFactory cerrada.");
+    logger.info("Hibernate SessionFactory cerrada.");
     }
 }
